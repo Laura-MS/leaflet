@@ -1,7 +1,8 @@
 # Creating leaflet map for tissue sample locations
 # Created by Laura Smith
 # Date created: 2022-05-25
-# Date updated: 2022-05-25
+# Date updated: 2022-05-30
+# recreating leaflet map that I made in QGIS in R
 
 # Resources used: 
 # https://www.listendata.com/2020/12/leaflet-in-R.html
@@ -39,7 +40,9 @@ m <- leaflet(dat) %>%
                   labelOptions = labelOptions(noHide = T, color = "#ffffff", textsize = "10px", 
                                               offset = c(0, -16), textOnly = TRUE, direction = "auto",
                                               style = 
-                                                list("color" = "white", "font-family" = "sans-serif", "font-style" = "arial"))) 
+                                                list("color" = "white", "font-family" = "sans-serif", "font-style" = "arial"))) %>%
+  addMeasure()
 
-    
+
+
 
